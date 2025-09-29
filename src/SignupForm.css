@@ -1,0 +1,119 @@
+/* Animated Gradient Background */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #6a11cb, #2575fc, #ff6a00, #ff005c);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+
+/* Gradient Animation */
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* Form Container Animation */
+
+.signup-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: formAppear 1s forwards;
+}
+
+@keyframes formAppear {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Form Title */
+
+.signup-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+/* Input Fields */
+
+.signup-container input {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 5px 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.signup-container input:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+    outline: none;
+}
+
+
+/* Labels */
+
+.signup-container label {
+    font-weight: bold;
+    color: #555;
+}
+
+
+/* Error messages */
+
+.signup-container p {
+    color: red;
+    font-size: 13px;
+    margin-top: -5px;
+    margin-bottom: 8px;
+}
+
+
+/* Button */
+
+.signup-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.signup-container button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
